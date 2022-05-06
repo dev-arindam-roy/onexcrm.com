@@ -1,0 +1,3 @@
+npm install autoprefixer@10.4.5 --save-exact
+
+{{ asset(config('onex.asset_path') . 'master-assets/css/adminlte.min.css') }}

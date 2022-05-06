@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class SignUpController extends Controller
 {
+    
+    public function __construct()
+    {
+
+    }
+
     public function index(Request $request)
     {
         $dataBag = [];

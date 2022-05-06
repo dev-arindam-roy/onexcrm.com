@@ -15,4 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+})->name('site.root');
+
+
+/** Force redirect to create business account */
+Route::get('/login', function () {
+    return redirect()->route('signup.start');
+});
+Route::get('/signup', function () {
+    return redirect()->route('signup.step1');
+});
+Route::get('/create-account', function () {
+    return redirect()->route('signup.step1');
+});
+Route::get('/free-account', function () {
+    return redirect()->route('signup.step1');
 });

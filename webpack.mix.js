@@ -23,7 +23,7 @@ mix.styles([
     .sourceMaps()
     .version();
 
-mix.css('resources/css/signup-steps.css', 'public/css/signup-steps.min.css')
+mix.css('resources/css/signinup.css', 'public/css/signinup.min.css')
     .sourceMaps()
     .version();
 

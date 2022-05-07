@@ -2,6 +2,10 @@ npm install autoprefixer@10.4.5 --save-exact
 
 {{ asset(config('onex.asset_path') . 'master-assets/css/adminlte.min.css') }}
 
+https://cssgradient.io/gradient-backgrounds/
+
+https://stackoverflow.com/questions/13550541/media-min-width-max-width
+
 Next Task:- 
 
 1. implement - jquery validation, Toastr, SweetAlert2

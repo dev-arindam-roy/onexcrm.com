@@ -15,6 +15,6 @@ class SignUpController extends Controller
     public function index(Request $request)
     {
         $dataBag = [];
-        return view('sign_in_up.signup-step1', $dataBag);
+        return view('sign_in_up.signup-layout-1-1', $dataBag);
     }
 }

@@ -1,0 +1,29 @@
+.background-gradient-1 {
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+}
+#signupLayout11 .signinup-box-msg {
+    color: #A9C9FF;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: right;
+    font-size: 20px;
+}
+@media screen and (min-width: 330px) and (max-width: 768px) {
+    #signupLayout11 .signinup-box-msg {
+        text-align: center !important;
+    }
+}
+
+#signupLayout12 .signinup-box-msg {
+    color: #d4d5d7;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+} 
+#signupLayout13 .signinup-box-msg {
+    color: #A9C9FF;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+} 

@@ -9,15 +9,8 @@
     <link rel="stylesheet" href="{{ asset(config('onex.asset_path') . 'master-assets/fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset(config('onex.asset_path') . 'master-assets/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="{{ asset(config('onex.asset_path') . 'css/app.min.css') }}">
+    <link rel="stylesheet" href="{{ asset(config('onex.asset_path') . 'css/signinup.min.css') }}">
     @stack('page_css_link')
     @stack('page_css')
-    <style>
-        .signinup-box-msg {
-            color: #8d8b8b;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-align: center;
-        }
-    </style>
 </head>
-<body class="hold-transition register-page">
+<body class="background-gradient-1">

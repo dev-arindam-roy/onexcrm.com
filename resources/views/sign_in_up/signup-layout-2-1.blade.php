@@ -1,28 +1,37 @@
-@extends('sign_in_up.layouts.layout-1')
+@extends('sign_in_up.layouts.layout-2')
 
 @section('page_title', '| Create Account')
 
 @push('page_css')
 <style type="text/css">
-.background-gradient-1 {
-    background-image: linear-gradient( 102.1deg,  rgba(96,221,142,1) 8.7%, rgba(24,138,141,1) 88.1% );
+html, body {
+    background: #ddd;
 }
 .signinup-box-msg {
-    color: rgba(24,138,141,1) !important;
+    color: #007bff !important;
+}
+.signup-box {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset !important;
 }
 </style>
 @endpush
 
 @section('page_content')
-    <div class="container-fluid" id="signupLayout13">
-        <div class="row justify-content-center mt-5">
+    <div class="container-fluid" id="signupLayout21">
+        <div class="row justify-content-center mt-3">
             <div class="col-11 col-sm-9 col-md-7 col-lg-6 p-0 mt-3 mb-2">
-                <div class="card card-outline card-primary">
-                    <div class="card-header text-center">
-                        <a href="{{ route('signup.businessAccount') }}" class="h1"><b>ONEX</b>CRM</a>
+                <div class="card card-outline card-primary signup-box">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <a href="{{ route('signup.businessAccount') }}" class="h1"><b>ONEX</b>CRM</a>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="signinup-box-msg">Create an Account</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body">
-                        <p class="signinup-box-msg">Create an Account</p>
                         <form action="" method="post" autocomplete="off">
                             <div class="row">
                                 <div class="col-md-6">
@@ -135,11 +144,29 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12 mt-3">
-                                    <button type="submit" class="btn btn-block btn-success">Create My Account</button>
+                                    <button type="submit" class="btn btn-block btn-success">Create My Business Account</button>
                                 </div>
                             </div>
                         </form>
-                        <div class="mt-3 text-center"><a href="" class="text-center">I already have an Account, Lets SignIn</a></div>
+                        <div class="social-auth-links text-center">
+                            <p><b>- OR -</b></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#" class="btn btn-block btn-primary">
+                                    <i class="fab fa-facebook mr-2"></i>
+                                    Sign up using Facebook
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#" class="btn btn-block btn-danger mt-resp-10">
+                                    <i class="fab fa-google-plus mr-2"></i>
+                                    Sign up using Google+
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-2"><a href="" class="text-center">I already have an Account, Lets SignIn</a></div>
                     </div>
                 </div>
             </div>

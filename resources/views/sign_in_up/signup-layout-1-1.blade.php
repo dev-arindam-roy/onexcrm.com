@@ -123,31 +123,36 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="custom-control custom-checkbox">
                                         <input class="custom-control-input custom-control-input-success" type="checkbox" id="AccountTerms">
                                         <label for="AccountTerms" class="custom-control-label">I agree to the <a href="#">terms & conditions</a></label>
                                     </div>
                                 </div>
-                                <div class="col-md-3 mt-3"></div>
-                                <div class="col-md-3">
-                                    <button type="submit" class="btn btn-block btn-success">Create My Account</button>
+                                <div class="col-md-12 mt-3">
+                                    <button type="submit" class="btn btn-block btn-success">Create My Business Account</button>
                                 </div>
                             </div>
                         </form>
                         <div class="social-auth-links text-center">
-                            <p>- OR -</p>
-                            <a href="#" class="btn btn-block btn-primary">
-                                <i class="fab fa-facebook mr-2"></i>
-                                Sign up using Facebook
-                            </a>
-                            <a href="#" class="btn btn-block btn-danger">
-                                <i class="fab fa-google-plus mr-2"></i>
-                                Sign up using Google+
-                            </a>
+                            <p><b>- OR -</b></p>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="#" class="btn btn-block btn-primary">
+                                    <i class="fab fa-facebook mr-2"></i>
+                                    Sign up using Facebook
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#" class="btn btn-block btn-danger mt-resp-10">
+                                    <i class="fab fa-google-plus mr-2"></i>
+                                    Sign up using Google+
+                                </a>
+                            </div>
                         </div>
 
-                        <div class="text-center"><a href="" class="text-center">I already have an Account, Lets SignIn</a></div>
+                        <div class="text-center mt-2"><a href="" class="text-center">I already have an Account, Lets SignIn</a></div>
                     </div>
                 </div>
             </div>

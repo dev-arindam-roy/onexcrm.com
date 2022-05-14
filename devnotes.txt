@@ -6,6 +6,14 @@ https://cssgradient.io/gradient-backgrounds/
 
 https://stackoverflow.com/questions/13550541/media-min-width-max-width
 
+https://getcssscan.com/css-box-shadow-examples
+
 Next Task:- 
 
 1. implement - jquery validation, Toastr, SweetAlert2
+
+
+
+Asset Download
+=====================
+https://www.cssscript.com/simple-typewriter-effect-pure-javascript-typewriterjs/

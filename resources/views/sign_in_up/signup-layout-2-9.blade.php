@@ -280,7 +280,7 @@ $(function() {
       //}
     });
 
-    $(".back-btn").click(function(){
+    $(".back-btn").click(function() {
       current_fs = $(this).closest("fieldset");
       previous_fs = $(this).closest("fieldset").prev();
       $("#signup-progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
@@ -290,7 +290,7 @@ $(function() {
       setProgressBar(--current);
     });
 
-    function setProgressBar(curStep){
+    function setProgressBar(curStep) {
       var percent = parseFloat(100 / steps) * curStep;
       percent = percent.toFixed();
       console.log(percent);

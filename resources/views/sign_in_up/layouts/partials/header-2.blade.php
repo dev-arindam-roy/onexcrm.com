@@ -13,4 +13,4 @@
     <link rel="stylesheet" href="{{ asset(config('onex.asset_path') . 'css/signinup.min.css') }}">
     @stack('page_css')
 </head>
-<body>
+<body class="body-bgcolor">

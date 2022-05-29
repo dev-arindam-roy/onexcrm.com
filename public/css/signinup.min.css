@@ -115,3 +115,8 @@
     font-weight: 600;
     color: #c1c1c1;
 }
+@media screen and (max-width: 575px) {
+    .ong {
+      font-size: 36px;
+    }
+}

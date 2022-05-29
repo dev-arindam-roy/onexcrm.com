@@ -46,13 +46,13 @@ html, body {
                             <div class="col-md-6">
                                 <a href="#" class="btn btn-block btn-primary">
                                     <i class="fab fa-facebook mr-2"></i>
-                                    Sign up using Facebook
+                                    Sign up by Facebook
                                 </a>
                             </div>
                             <div class="col-md-6">
                                 <a href="#" class="btn btn-block btn-danger mt-resp-10">
                                     <i class="fab fa-google-plus mr-2"></i>
-                                    Sign up using Google+
+                                    Sign up by Google+
                                 </a>
                             </div>
                         </div>

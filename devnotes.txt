@@ -10,6 +10,15 @@ https://getcssscan.com/css-box-shadow-examples
 
 https://fontawesome.com/v5/icons/envelope?s=regular
 
+
+reCaptcha v2
+client Side Key - 6LcbHikgAAAAAPRey1eITjgupUzntNM_gqi0bnm5 (site Key)
+server Side Key - 6LcbHikgAAAAAP_G2dZZexDbLKHpqDFrqfzgI573 (secrete Key)
+
+reCaptcha v3
+client Side Key - 6LeqJCkgAAAAAMv1ggnn9fyG0yAFm9S1TPt3FcVQ (site Key)
+server Side Key - 6LeqJCkgAAAAAMCkW5y1VjGWzdP2nXo7flpG74nm (secrete Key)
+
 Next Task:- 
 
 1. implement - jquery validation, Toastr, SweetAlert2

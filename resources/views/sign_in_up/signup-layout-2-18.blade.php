@@ -9,7 +9,7 @@
 @push('page_css')
 <style type="text/css">
 .body-bgcolor {
-    background-image: url("master-assets/images/fullbg-1.jpg");
+    background-image: url("master-assets/images/fullbg-3.jpg");
     height: 100%;
     width: 100%;
     background-position: center;

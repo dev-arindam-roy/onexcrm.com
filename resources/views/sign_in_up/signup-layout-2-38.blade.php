@@ -21,7 +21,7 @@
 @endpush
 
 @section('page_content')
-    <div class="container-fluid" id="signupLayout237">
+    <div class="container-fluid" id="signupLayout238">
         <div class="row justify-content-center mt-3">
             <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 p-0 mt-3 mb-2">
                 <div class="card card-outline card-primary signup-box">
@@ -60,14 +60,6 @@
                             </div>
                         </div>
                         <div id="emailRegistrationBox" style="display: none;">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="alert alert-primary">
-                                        <h5 style="color: #fff;"><i class="fas fa-user-tie"></i> <small>Hi, I'm <strong>Alex</strong>, Your CRM Manager.</small></h5>
-                                        <div id="signupText"></div>
-                                    </div>
-                                </div>
-                            </div>
                             <form name="signupFrm" id="msform" action="" method="post" autocomplete="off">
                                 <ul id="signup-progressbar" class="signup-step-primary">
                                     <li class="active" id="pb-personal"><strong>Personal</strong></li>
@@ -254,6 +246,7 @@
                                         </div>
                                     </fieldset>
                                 </div>
+                                <input type="hidden" id="googleV3Captcha" name="gcaptcha">
                             </form>
                         </div>
                         <div class="text-center mt-3"><a href="" class="text-center">I already have an Account, Lets SignIn</a></div>
@@ -269,12 +262,21 @@
 
 @push('page_js_link')
 <script src="{{ asset(config('onex.asset_path') . 'master-assets/select2/js/select2.full.min.js') }}"></script>
-<script src="{{ asset(config('onex.asset_path') . 'master-assets/typewriterjs/core.js') }}"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LeqJCkgAAAAAMv1ggnn9fyG0yAFm9S1TPt3FcVQ"></script>
 @endpush
 
 @push('page_js')
 <script>
 $(function() {
+    setV3Captcha();
+    function setV3Captcha() {
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LeqJCkgAAAAAMv1ggnn9fyG0yAFm9S1TPt3FcVQ', {action: 'submit'}).then(function(token) {
+                console.log(token);
+                document.getElementById('googleV3Captcha').value = token;
+            });
+        });
+    }
     $('#AccountOrganizationCategory').select2({
         placeholder: "Organization Category",
         allowClear: true
@@ -294,19 +296,6 @@ $(function() {
             $('#startAgain').addClass('d-none');
             $('#socialRegistrationBox').fadeIn();
         });
-    });
-
-    const instance = new Typewriter('#signupText', {
-      strings: [
-          'Hey bro,', 
-          'Welcome to ONEX', 
-          'Lets create a business account', 
-          'Its Free', 'Manage your business with only 1 CRM - <b>ONEX CRM</b>', 
-          'We are always ready to help you to grow your business', 
-          'Thanks, see you again buddy.'
-        ],
-      autoStart: true,
-      loop: true
     });
 
     var current_fs, next_fs, previous_fs;

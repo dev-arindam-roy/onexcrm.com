@@ -10,7 +10,7 @@ class SignUpController extends Controller
     
     public function __construct()
     {
-        $this->defaultSignupViewLayout = 'signup-layout-2-37';
+        $this->defaultSignupViewLayout = 'signup-layout-2-38';
     }
 
     public function index(Request $request)

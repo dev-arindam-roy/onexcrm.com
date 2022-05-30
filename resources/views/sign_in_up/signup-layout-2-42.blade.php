@@ -27,7 +27,7 @@ html, body {
 @endpush
 
 @section('page_content')
-    <div class="container-fluid" id="signupLayout213">
+    <div class="container-fluid" id="signupLayout242">
         <div class="row justify-content-center mt-3">
             <div class="col-11 col-sm-9 col-md-4 col-lg-4 p-0 mt-3 mb-2">
                 <div class="card card-outline card-primary signup-box">
@@ -63,7 +63,7 @@ html, body {
                         <form action="" method="post" autocomplete="off">
                             <div class="row frm-info-section">
                                 <div class="col-md-12 mb-2">
-                                    <h3 class="step-heading text-left text-success"><i class="fas fa-user-check"></i> Personal Information</h4>
+                                    <h3 class="step-heading text-left text-primary"><i class="fas fa-user-check"></i> Personal Information</h4>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group mb-3">
@@ -247,7 +247,7 @@ $(function() {
     });
     $('body').on('click', '.next-info-btn', function () {
         $(this).parent().hide();
-        $(this).closest('.frm-info-section').next().find('.step-heading').addClass('text-success');
+        $(this).closest('.frm-info-section').next().find('.step-heading').addClass('text-primary');
         $(this).closest('.frm-info-section').next().slideDown();
         var infoSectionId = $(this).closest('.frm-info-section').next().attr('id');
         $('html, body').animate({

@@ -1,0 +1,183 @@
+.background-gradient-1 {
+    background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+}
+.signinup-box-msg {
+    color: #A9C9FF;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: right;
+    font-size: 20px;
+}
+#signupLayout12 .signinup-box-msg {
+    color: #d4d5d7;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+} 
+#signupLayout13 .signinup-box-msg {
+    color: #A9C9FF;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#msform {
+    position: relative;
+    margin-top: 10px;
+}
+#signup-progressbar {
+    overflow: hidden;
+    color: lightgrey;
+    padding: 0;
+    margin: 0;
+}
+#signup-progressbar.signup-step-success .active {
+    color: #28a745;
+}
+#signup-progressbar.signup-step-primary .active {
+    color: #007bff;
+}
+#signup-progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400;
+    text-align: center;
+}
+#signup-progressbar #pb-personal:before {
+    content: "1";
+}
+#signup-progressbar #pb-account:before {
+    content: "2";
+}
+#signup-progressbar #pb-security:before {
+    content: "3";
+}
+#signup-progressbar #pb-business:before {
+    content: "4";
+}
+#signup-progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px;
+}
+#signup-progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1;
+}
+#signup-progressbar.signup-step-success li.active:before, #signup-progressbar.signup-step-success li.active:after {
+    background: #28a745;
+}
+#signup-progressbar.signup-step-primary li.active:before, #signup-progressbar.signup-step-primary li.active:after {
+    background: #007bff;
+}
+.progress {
+    height: 10px;
+    margin-top: 10px;
+}
+.card {
+    z-index: 0;
+    border: none;
+    position: relative;
+}
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+.step-heading {
+    text-align: right;
+    font-size: 21px;
+    font-weight: 600;
+    color: #c1c1c1;
+}
+ul.simple-timeline {
+    list-style-type: none;
+    position: relative;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+ul.simple-timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.simple-timeline > li {
+    margin: 10px 0;
+    padding-left: 10px;
+}
+ul.simple-timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+.signup-timeline-heading {
+    font-weight: 600;
+    color: #ccc;
+}
+.signup-timeline-submit-btn {
+    margin-left: 48px;
+}
+.timeline>div>.timeline-item {
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em !important;
+}
+.time-label span {
+    font-weight: 500 !important;
+}
+.timeline-header {
+    color: #000 !important;
+    font-weight: 600 !important;
+}
+.signup-default-timeline-sub-btn {
+    margin-left: 58px;
+    padding-right: 12px;
+}
+.oswald-create-account-title {
+    font-family: 'Oswald', sans-serif;
+}
+.timeline-black::before {
+    background-color: #000 !important;
+}
+
+
+
+@media screen and (min-width: 330px) and (max-width: 768px) {
+    .signinup-box-msg {
+        text-align: center !important;
+    }
+    .mt-resp-10 {
+        margin-top: 10px;
+
+    }
+}
+@media screen and (max-width: 575px) {
+    .ong {
+      font-size: 36px;
+    }
+}

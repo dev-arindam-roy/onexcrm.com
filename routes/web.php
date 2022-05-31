@@ -20,14 +20,14 @@ Route::get('/', function () {
 
 /** Force redirect to create business account */
 Route::get('/login', function () {
-    return redirect()->route('signup.start');
+    return redirect()->route('signup.businessAccount');
 });
 Route::get('/signup', function () {
-    return redirect()->route('signup.step1');
+    return redirect()->route('signup.businessAccount');
 });
 Route::get('/create-account', function () {
-    return redirect()->route('signup.step1');
+    return redirect()->route('signup.businessAccount');
 });
 Route::get('/free-account', function () {
-    return redirect()->route('signup.step1');
+    return redirect()->route('signup.businessAccount');
 });

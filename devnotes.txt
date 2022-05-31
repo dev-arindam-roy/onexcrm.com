@@ -20,8 +20,6 @@ client Side Key - 6LeqJCkgAAAAAMv1ggnn9fyG0yAFm9S1TPt3FcVQ (site Key)
 server Side Key - 6LeqJCkgAAAAAMCkW5y1VjGWzdP2nXo7flpG74nm (secrete Key)
 
 Next Task:- 
-
-0. Nav & Pill signup form
 1. implement - jquery validation, Toastr, SweetAlert2
 
 

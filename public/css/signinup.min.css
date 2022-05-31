@@ -9,16 +9,6 @@
     text-align: right;
     font-size: 20px;
 }
-@media screen and (min-width: 330px) and (max-width: 768px) {
-    .signinup-box-msg {
-        text-align: center !important;
-    }
-    .mt-resp-10 {
-        margin-top: 10px;
-
-    }
-}
-
 #signupLayout12 .signinup-box-msg {
     color: #d4d5d7;
     font-weight: 600;
@@ -114,6 +104,77 @@
     font-size: 21px;
     font-weight: 600;
     color: #c1c1c1;
+}
+ul.simple-timeline {
+    list-style-type: none;
+    position: relative;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+ul.simple-timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.simple-timeline > li {
+    margin: 10px 0;
+    padding-left: 10px;
+}
+ul.simple-timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+.signup-timeline-heading {
+    font-weight: 600;
+    color: #ccc;
+}
+.signup-timeline-submit-btn {
+    margin-left: 48px;
+}
+.timeline>div>.timeline-item {
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em !important;
+}
+.time-label span {
+    font-weight: 500 !important;
+}
+.timeline-header {
+    color: #000 !important;
+    font-weight: 600 !important;
+}
+.signup-default-timeline-sub-btn {
+    margin-left: 58px;
+    padding-right: 12px;
+}
+.oswald-create-account-title {
+    font-family: 'Oswald', sans-serif;
+}
+.timeline-black::before {
+    background-color: #000 !important;
+}
+
+
+
+@media screen and (min-width: 330px) and (max-width: 768px) {
+    .signinup-box-msg {
+        text-align: center !important;
+    }
+    .mt-resp-10 {
+        margin-top: 10px;
+
+    }
 }
 @media screen and (max-width: 575px) {
     .ong {

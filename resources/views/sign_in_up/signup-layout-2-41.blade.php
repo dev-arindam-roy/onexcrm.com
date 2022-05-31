@@ -225,7 +225,9 @@ html, body {
                             <button type="button" class="btn btn-secondary prev-btn d-none" id="prev_btn">Previous</button>
                             <button type="button" class="btn btn-primary next-btn" id="next_btn">Next</button>
                         </form>
-                        <div class="text-center mt-5"><a href="" class="text-center">I already have an Account, Lets SignIn</a></div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="text-center mt-3"><a href="" class="text-center">I already have an Account, Lets SignIn</a></div>
                     </div>
                 </div>
             </div>

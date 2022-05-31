@@ -2,7 +2,7 @@
     font-weight: 600;
     margin-bottom: 0;
 }
-.form-lb em {
+.form-lb em, em {
     color: #dc3545;
 }
 .select2-container .select2-selection--single {

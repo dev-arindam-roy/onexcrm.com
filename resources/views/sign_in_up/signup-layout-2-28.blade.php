@@ -114,7 +114,6 @@ html, body {
                                 </div>
                             </form>
                         </div>
-                        <div class="text-center mt-2"><a href="" class="text-center">I already have an Account, Lets SignIn</a></div>
                         <div class="social-auth-links text-center hide-box">
                             <p><b>- OR -</b></p>
                         </div>
@@ -132,6 +131,9 @@ html, body {
                                 </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="text-center mt-2"><a href="" class="text-center">I already have an Account, Lets SignIn</a></div>
                     </div>
                 </div>
             </div>

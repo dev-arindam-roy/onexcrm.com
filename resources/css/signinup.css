@@ -164,6 +164,21 @@ ul.simple-timeline > li:before {
 .timeline-black::before {
     background-color: #000 !important;
 }
+.signup-owl-item {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+}
+.owl-item-title {
+    color: #ccc;
+    font-weight: 500;
+    font-size: 22px;
+}
+.owl-card-body {
+    min-height: 200px;
+}
+.owl-init-block-ui {
+    width: 100%;
+    height: 150px;
+}
 
 
 

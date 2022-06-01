@@ -19,7 +19,7 @@ html, body {
 @section('page_content')
     <div class="container-fluid" id="signupLayout235">
         <div class="row justify-content-center mt-3">
-            <div class="col-11 col-sm-9 col-md-6 col-lg-6 p-0 mt-3 mb-2">
+            <div class="col-11 col-sm-9 col-md-6 col-lg-6 p-0 mt-5 mb-2">
                 <div class="card card-outline card-primary signup-box">
                     <div class="card-header">
                         <div class="row">

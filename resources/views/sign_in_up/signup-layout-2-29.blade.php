@@ -114,6 +114,8 @@ html, body {
                                 </div>
                             </form>
                         </div>
+                    </div>
+                    <div class="card-footer">
                         <div class="text-center mt-2"><a href="" class="text-center">I already have an Account, Lets SignIn</a></div>
                     </div>
                 </div>

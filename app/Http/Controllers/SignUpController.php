@@ -25,4 +25,10 @@ class SignUpController extends Controller
         }
         return view('sign_in_up.' . $viewLayout, $dataBag);
     }
+
+    public function emailChecking(Request $request)
+    {
+        return "true";
+        return "false";
+    }
 }

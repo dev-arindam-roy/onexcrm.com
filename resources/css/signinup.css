@@ -1,27 +1,30 @@
-.background-gradient-1 {
-    background-color: #A9C9FF;
-    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
-}
 .signinup-box-msg {
-    color: #A9C9FF;
     font-weight: 600;
     letter-spacing: 1px;
-    text-align: right;
     font-size: 20px;
 }
-#signupLayout12 .signinup-box-msg {
+.mixsilver {
     color: #d4d5d7;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-align: center;
-} 
-#signupLayout13 .signinup-box-msg {
-    color: #A9C9FF;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-align: center;
 }
-
+.mixgreen {
+    color: rgba(24,138,141,1);
+}
+fieldset.step-card-body {
+    min-height: 230px;
+}
+.modify-card-header {
+    margin-left: -22px;
+    margin-right: -22px;
+}
+.modify-alert-container {
+    margin-bottom: -30px;
+}
+.alert.alert-success {
+    border-radius: 0px;
+}
+.frm-info-section:not(:first-of-type) {
+    display: none;
+}
 #msform {
     position: relative;
     margin-top: 10px;
@@ -179,7 +182,32 @@ ul.simple-timeline > li:before {
     width: 100%;
     height: 150px;
 }
-
+.text-carousel-inner-fix-height {
+    min-height: 200px;
+}
+.text-carousel-inner-fix-height-48 {
+    min-height: 150px;
+}
+ul.feature-ul li {
+    list-style: none;
+    font-size: 18px;
+    color: #ddd;
+    line-height: 40px;
+}
+ul.feature-ul {
+    font-size: 30px;
+    color: #ccc;
+    font-weight: 600;
+}
+ul.feature-ul li:hover {
+    cursor: pointer;
+    color: #007bff;
+    text-shadow:0px 0px 30px #007bff;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
 
 
 @media screen and (min-width: 330px) and (max-width: 768px) {
@@ -190,9 +218,15 @@ ul.simple-timeline > li:before {
         margin-top: 10px;
 
     }
+    .form-rest-btn {
+        margin-top: 10px;
+    }
 }
 @media screen and (max-width: 575px) {
     .ong {
       font-size: 36px;
+    }
+    .feature-ul {
+        display: none;
     }
 }

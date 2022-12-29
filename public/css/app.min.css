@@ -42,3 +42,13 @@
     font-size: 16px !important;
     color: #dc3545;
 }
+.error-input-group {
+    background-color: #dc3545;
+    color: #fff;
+    border-color: #dc3545;
+}
+.success-input-group {
+    background-color: #218838;
+    color: #fff;
+    border-color: #218838;
+}

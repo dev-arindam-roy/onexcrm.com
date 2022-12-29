@@ -208,6 +208,12 @@ ul.feature-ul li:hover {
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
+.mt-minus-10 {
+    margin-top: -10px;
+} 
+.mb-10 {
+    margin-bottom: 10px;
+}
 
 
 @media screen and (min-width: 330px) and (max-width: 768px) {

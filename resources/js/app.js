@@ -37,10 +37,12 @@ $(function() {
         highlight: function (element, errorClass, validClass) {
             $(element).addClass('is-invalid').removeClass('is-valid');
             $(element.form).find('label[for=' + element.id + ']').addClass('text-danger').removeClass('text-success');
+            $(element).next('.input-group-append').find('.input-group-text').addClass('error-input-group').removeClass('success-input-group');
         },
         unhighlight: function (element, errorClass, validClass) {
             $(element).addClass('is-valid').removeClass('is-invalid');
             $(element.form).find('label[for=' + element.id + ']').addClass('text-success').removeClass('text-danger');
+            $(element).next('.input-group-append').find('.input-group-text').addClass('success-input-group').removeClass('error-input-group');
         },
         invalidHandler: function(event, validator) {
             var errorsCount = validator.numberOfInvalids();
@@ -53,11 +55,13 @@ $(function() {
         var formID = $(this).data('formid');
         $("#" + formID).validate().resetForm();
         $("#" + formID)[0].reset();
+        $("#validationErrorContainer").hide();
         $(".form-control").removeClass('is-valid');
         $(".form-control").removeClass('is-invalid');
         $(".form-lb").removeClass('text-success').removeClass('text-danger');
         $(".custom-checkbox").find('input[type="checkbox"]').removeClass('is-valid').removeClass('is-invalid');
         $(".custom-checkbox").find('.custom-control-label').removeClass('text-success').removeClass('text-danger');
+        $(".input-group-text").removeClass('success-input-group').removeClass('error-input-group');
         $(".eye-showHide-password").addClass('d-none');
         toastr.remove();
         //toastr.clear();
@@ -90,3 +94,4 @@ $(function() {
         }
     });
 });
+

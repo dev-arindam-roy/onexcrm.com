@@ -4,31 +4,90 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
+use App\Services\Signup\ValidationRulesService as SignupValidationService;
+use App\Services\Signup\BusinessLogicService as SignupBusinessLogicService;
+use Helper;
+use Log;
 
 class SignUpController extends Controller
 {
+    protected $signupValidationRules;
+    protected $signupBusinessLogic;
     
     public function __construct()
     {
-        $this->defaultSignupViewLayout = 'signup-layout-2-38';
+        $this->defaultSignupViewLayout = '1';
+        $this->signupValidationRules = new SignupValidationService();
+        $this->signupBusinessLogic = new SignupBusinessLogicService();
     }
 
     public function index(Request $request)
     {
         $dataBag = [];
-        $viewLayout = $this->defaultSignupViewLayout;
+        $signupView = 'signup-layout-';
+        $layoutNo = $this->defaultSignupViewLayout;
         if ($request->has('layout') && !empty($request->get('layout'))) {
-            $signupView = 'signup-layout-' . trim($request->get('layout'));
-            if (View::exists('sign_in_up.' . $signupView)) {
-                $viewLayout = $signupView;
-            }
+            $layoutNo = trim($request->get('layout'));
         }
-        return view('sign_in_up.' . $viewLayout, $dataBag);
+        $dataBag['layout_no'] = $layoutNo;
+        $viewLayout = $signupView . $layoutNo;
+        if (View::exists('sign-inup.' . $viewLayout)) {
+            return view('sign-inup.' . $viewLayout, $dataBag);
+        }
+        return view('sign-inup.signup-layout-1', $dataBag);
     }
 
     public function emailChecking(Request $request)
     {
+        $validation = $this->signupValidationRules->emailFieldValidation($request);
+        if (!empty($validation)) {
+            return "false";
+        }
+        $isEmailExist = $this->signupBusinessLogic->isUserEmailExist($request);
+        if ($isEmailExist) {
+            return "false";
+        }
         return "true";
-        return "false";
+    }
+
+    public function signup(Request $request)
+    {
+        $dataBag = [];
+        $validation = $this->signupValidationRules->signupValidation($request);
+        if (!empty($validation)) {
+            $dataBag['validation_errors'] = $validation;
+            $getValidationErrors = $validation['error_details'];
+            if ($request->ajax()) {
+                $response = Helper::constructResponse($dataBag, 'Please proceed with valid input data and try again.', 'VALIDATION_ERROR', 203);
+                return response()->json($response);
+            }
+            $inputs = $request->except(['password', 'password_confirmation']);
+            return back()
+                ->withErrors($getValidationErrors, 'signupErrorBag')
+                ->withInput($inputs)
+                ->with('toastMessageType', 'error')
+                ->with('toastMessage', 'Please proceed with valid input data and try again.')
+                ->with('toastMessageTitle', 'Oops! - ' . count($getValidationErrors) . ' Invalid Input Found.');
+        }
+        dd($request->all());
+        return '';
+    }
+
+    public function signupPartial(Request $request)
+    {
+        $dataBag = [];
+
+        if (!$this->emailChecking($request)) {
+            $response = Helper::constructResponse($dataBag, 'Signup partial email is already an user or subscriber.', 'SIGNUP_PARTIAL_USER', 201);
+            return response()->json($response);
+        }
+
+        $isSaved = $this->signupBusinessLogic->signupPartialSave($request);
+        if ($isSaved) {
+            $response = Helper::constructResponse($dataBag, 'Signup partials records saved successfully.', 'SIGNUP_PARTIAL_SAVED', 200);
+            return response()->json($response);
+        }
+        $response = Helper::constructResponse($dataBag, 'Something went worng during signup partial records save.', 'SIGNUP_PARTIAL_ERROR', 400);
+        return response()->json($response);
     }
 }

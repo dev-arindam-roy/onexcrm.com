@@ -205,6 +205,12 @@ ul.feature-ul li:hover {
     text-shadow:0px 0px 30px #007bff;
     transition: all 0.2s ease-in;
 }
+.mt-minus-10 {
+    margin-top: -10px;
+} 
+.mb-10 {
+    margin-bottom: 10px;
+}
 
 
 @media screen and (min-width: 330px) and (max-width: 768px) {

@@ -47,6 +47,10 @@ $(function() {
         invalidHandler: function(event, validator) {
             var errorsCount = validator.numberOfInvalids();
             toastr.error("Please proceed with valid input data and try again.", 'Oops! ' + errorsCount + " - Invalid Input Found");
+            $('html, body').animate({
+                scrollTop: $(validator.errorList[0].element).offset().top - 20
+            }, 600);
+            //console.log(validator);
         }
     });
 
@@ -93,5 +97,31 @@ $(function() {
             $(this).parents('.form-group').find('.eye-showHide-password').addClass('d-none');
         }
     });
+
+    //If - app in production environment 
+    if ($('#envMode').val() != undefined && $('#envMode').val().toLowerCase() == 'production' && $('#isDebug').val() != undefined && !$('#isDebug').val()) {
+        
+        //Disable right-click
+        document.addEventListener('contextmenu', (event) => event.preventDefault());
+
+        document.onkeydown = (event) => {
+            //Disable F12, Ctrl + Shift + I, Ctrl + Shift + C, Ctrl + Shift + J, Ctrl + U,
+            if (event.code == 'F12' || event.key == 'F12' || event.keyCode === 123 || event.which === 123) {
+                return false;
+            }
+            if(event.ctrlKey && event.shiftKey && event.keyCode === 'I'.charCodeAt(0)) {
+                return false;
+            }
+            if(event.ctrlKey && event.shiftKey && event.keyCode === 'C'.charCodeAt(0)) {
+                return false;
+            }
+            if(event.ctrlKey && event.shiftKey && event.keyCode === 'J'.charCodeAt(0)) {
+                return false;
+            }
+            if(event.ctrlKey && event.keyCode === 'U'.charCodeAt(0)) {
+                return false;
+            }
+        };
+    }
 });
 

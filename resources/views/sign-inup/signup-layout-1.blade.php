@@ -147,7 +147,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group mb-3">
-                                        <label class="form-lb @if ($errors->signupErrorBag->has('business_name')) text-danger @endif" for="AccountBrand">Organization/Brand Name: <em>*</em></label>
+                                        <label class="form-lb @if ($errors->signupErrorBag->has('business_name')) text-danger @endif" for="AccountBrand">Business/Brand Name: <em>*</em></label>
                                         <div class="input-group">
                                             <!-- minlength="2" maxlength="60" required="required" -->
                                             <input type="text" name="business_name" id="AccountBrand" class="partial-signup form-control @if ($errors->signupErrorBag->has('business_name')) is-invalid @endif" placeholder="Organization Name" autocomplete="off" value="{{old('business_name')}}" />
@@ -240,7 +240,7 @@ $(function() {
         })
     });
     */
-    /*
+    
     var signupTime = 0;
     var formId = $('#signupFrm');
     formId.validate({
@@ -262,6 +262,7 @@ $(function() {
             email_id: {
                 required: true,
                 email: true,
+                disposableEmail: true,
                 maxlength: 60,
                 remote: {
                     url: "{{ route('signup.businessAccount.emailChecking') }}",
@@ -322,6 +323,7 @@ $(function() {
             email_id: {
                 required: 'Please enter email address.',
                 email: 'Please enter valid email address.',
+                disposableEmail: 'This email not acceptable.',
                 maxlength: 'Maximum 60 characters are allowed.',
                 remote: 'This email address already exist.'
             },
@@ -360,7 +362,7 @@ $(function() {
                 data: $(form).serialize() + '&layout=1&signup_time=' + signupTime,
                 headers: {
                     'request-key':"{{ env('REQUEST_KEY') }}",
-                    'request-crm':"{{ env('REQUEST_END') }}",
+                    'request-end':"{{ env('REQUEST_END') }}",
                 },
                 dataType: 'json',
                 cache: false,
@@ -382,7 +384,7 @@ $(function() {
     setInterval(signupDuration, 1000);
     function signupDuration() {
         signupTime = signupTime + 1;
-    }*/
+    }
 });
 </script>
 @endpush

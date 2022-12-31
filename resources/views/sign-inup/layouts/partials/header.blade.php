@@ -17,3 +17,5 @@
     @stack('page_css')
 </head>
 <body class="body-bgcolor">
+<!-- ENV VARS -->
+@include('common.env-data')

@@ -214,6 +214,19 @@ ul.feature-ul li:hover {
 .mb-10 {
     margin-bottom: 10px;
 }
+.language-change-container {
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    width: 185px;
+    text-align: right;
+}
+.language-change-container .input-group-append {
+    margin-right: -2px;
+}
+.language-change-container .input-group-append .fas {
+    font-size: 24px;
+}
 
 
 @media screen and (min-width: 330px) and (max-width: 768px) {

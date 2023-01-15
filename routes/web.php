@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LocalizationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 })->name('site.root');
 
+/** Localization / Change language */
+Route::get('locale/{lang}', [LocalizationController::class, 'index'])->name('localization');
 
 /** Force redirect to create business account */
 Route::get('/login', function () {

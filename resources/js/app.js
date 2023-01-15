@@ -46,6 +46,7 @@ $(function() {
         },
         invalidHandler: function(event, validator) {
             var errorsCount = validator.numberOfInvalids();
+            toastr.remove();
             toastr.error("Please proceed with valid input data and try again.", 'Oops! ' + errorsCount + " - Invalid Input Found");
             $('html, body').animate({
                 scrollTop: $(validator.errorList[0].element).offset().top - 20
@@ -123,5 +124,20 @@ $(function() {
             }
         };
     }
+
+    $('#changeLocalization').on('change', function() {
+        if ($(this).val() != '') {
+            let lang = $(this).val();
+            Swal.fire({
+                title: 'Switching your language',
+                text: 'Please wait...',
+                didOpen: () => {
+                    Swal.showLoading()
+                }
+            });
+            let localeUrl = window.location.protocol + '//' + window.location.host + '/' + 'locale/' + lang;
+            window.location.href = localeUrl;
+        }
+    })
 });
 

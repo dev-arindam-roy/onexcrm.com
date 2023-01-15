@@ -3,6 +3,8 @@
 namespace App\Traits;
 
 use Illuminate\Support\Facades\Validator;
+use Session;
+use App;
 
 trait UtilityTrait
 {
@@ -34,5 +36,14 @@ trait UtilityTrait
             $errorDetails['error_messages'] = $errorMessages;
         }
         return $errorDetails;
+    }
+
+    public static function setLocalization()
+    {
+        if(session()->has('locale')) {
+            App::setLocale(session()->get('locale'));
+        } else {
+            session()->put('locale', App::getLocale());
+        }
     }
 }

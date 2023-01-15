@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\View;
 use App\Services\Signup\ValidationRulesService as SignupValidationService;
 use App\Services\Signup\BusinessLogicService as SignupBusinessLogicService;
 use Helper;
+use Lang;
 use Log;
 
 class SignUpController extends Controller
@@ -66,8 +67,8 @@ class SignUpController extends Controller
                 ->withErrors($getValidationErrors, 'signupErrorBag')
                 ->withInput($inputs)
                 ->with('toastMessageType', 'error')
-                ->with('toastMessage', 'Please proceed with valid input data and try again.')
-                ->with('toastMessageTitle', 'Oops! - ' . count($getValidationErrors) . ' Invalid Input Found.');
+                ->with('toastMessage', Lang::get('error.validation.sub_title.proceed_valid_input'))
+                ->with('toastMessageTitle', Lang::get('error.validation.count.title', array('validation_count' => count($getValidationErrors))));
         }
         dd($request->all());
         return '';

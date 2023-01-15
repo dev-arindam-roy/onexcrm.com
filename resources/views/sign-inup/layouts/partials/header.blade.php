@@ -8,7 +8,7 @@
     @stack('page_meta')
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{ asset(config('onex.asset_path') . 'master-assets/fontawesome/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset(config('onex.asset_path') . 'master-assets/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{ asset(config('onex.asset_path') . 'master-assets/alte/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="{{ asset(config('onex.asset_path') . 'master-assets/sweet-alert2/sweetalert2.min.css') }}">
     <link rel="stylesheet" href="{{ asset(config('onex.asset_path') . 'master-assets/toastr/toastr.min.css') }}">
     @stack('page_css_link')

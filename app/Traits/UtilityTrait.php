@@ -4,6 +4,7 @@ namespace App\Traits;
 
 use Illuminate\Support\Facades\Validator;
 use Session;
+use Lang;
 use App;
 
 trait UtilityTrait
@@ -45,5 +46,10 @@ trait UtilityTrait
         } else {
             session()->put('locale', App::getLocale());
         }
+    }
+
+    public static function localizationJsMessages()
+    {
+        return json_encode(Lang::get('jsmessages'), JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES);
     }
 }

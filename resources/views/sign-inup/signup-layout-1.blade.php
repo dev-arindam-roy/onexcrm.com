@@ -20,7 +20,9 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-6 text-center">
-                                <a href="{{ route('signup.businessAccount') }}" class="h1"><b>ONEX</b>CRM</a>
+                                <a href="{{ route('signup.businessAccount') }}">
+                                    <img src="{{ asset(config('onex.asset_path') . 'master-assets/images/onex-logo-text.png') }}" alt="{{ env('crm_name', 'onexcrm-logo') }}" title="{{ env('crm_name', 'onexcrm') }}" class="img-fluid crm-signup-header-logo" />
+                                </a>
                             </div>
                             <div class="col-md-6">
                                 <p class="signinup-box-msg text-primary text-right">{{ __('label.signup.create_account.title') }}</p>
@@ -213,6 +215,8 @@
 @push('page_js')
 <script>
 $(function() {
+    
+    /** NEED TO REMOVE :: test the validation in ajax response back */
     /*
     $('#signupBtn').on('click', function() {
         $.ajax({
@@ -241,7 +245,6 @@ $(function() {
         })
     });
     */
-    /*
     var signupTime = 0;
     var formId = $('#signupFrm');
     formId.validate({
@@ -380,13 +383,13 @@ $(function() {
                 error: function (xhr, status, error) {
                 }
             });
+            //return false;
         }
     });
     setInterval(signupDuration, 1000);
     function signupDuration() {
         signupTime = signupTime + 1;
     }
-    */
 });
 </script>
 @endpush

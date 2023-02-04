@@ -8,7 +8,7 @@ const defaultSwal = Swal.mixin({
 
 const swalLoading = function (waitText = null) {
     defaultSwal.fire({
-        title: waitText ?? 'Please Wait...',
+        title: waitText ?? localizationJsDataObj.please_wait ?? 'Please Wait...',
         didOpen: () => {
             Swal.showLoading()
         }
@@ -30,17 +30,18 @@ const validationErrorDisply = function (responseData, displayInHtml = false, for
     }
     if (valiErrContent.error_messages) {
         let valiErrMsgs = valiErrCount = valiErrContent.error_messages.length;
+        valiErrMsgTitle = (localizationJsDataObj.oops_n_invalid_input_found !== undefined && localizationJsDataObj.oops_n_invalid_input_found) ? localizationJsDataObj.oops_n_invalid_input_found.replace('[error_cont]', valiErrCount) : `Oops! - ${valiErrCount} Invalid Input Found`;
         if (valiErrMsgs) {
             let valiErrTxt = valiErrContent.error_messages.map(function (item, index) {
                 return (index + 1) + '. ' + item;
             }).join("<br/>");
             if (valiErrTxt != '' && valiErrTxt != null) {
                 if (displayInToastr) {
-                    toastr.error(valiErrTxt, 'Oops! invalid data inputs');
+                    toastr.error(valiErrTxt, valiErrMsgTitle);
                 }
                 if (displayInHtml) {
                     errContainer.show();
-                    valiErrMsgTitle = `<h5><strong>Oops! - ${valiErrCount} Invalid Input Found</strong></h5>`;
+                    valiErrMsgTitle = `<h5><strong>${valiErrMsgTitle}</strong></h5>`;
                     if (valiErrMsg != '') {
                         valiErrMsgTitle += `<div class="mt-minus-10 mb-10"><small>${valiErrMsg}</small></div>`;
                     }

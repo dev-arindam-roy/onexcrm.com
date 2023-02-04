@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'lang_text' => 'বাংলা',
     /** Form Fields */
     'form.field.salutation' => 'অভিবাদন',
     'form.field.first_name' => 'নামের প্রথম অংশ',

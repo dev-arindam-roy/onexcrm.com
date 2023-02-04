@@ -1,3 +1,4 @@
+@include('common.localization-js-data')
 <script src="{{ asset(config('onex.asset_path') . 'master-assets/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset(config('onex.asset_path') . 'master-assets/alte/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset(config('onex.asset_path') . 'master-assets/alte/js/adminlte.min.js') }}"></script>

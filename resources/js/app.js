@@ -47,7 +47,7 @@ $(function() {
         invalidHandler: function(event, validator) {
             var errorsCount = validator.numberOfInvalids();
             toastr.remove();
-            toastr.error("Please proceed with valid input data and try again.", 'Oops! ' + errorsCount + " - Invalid Input Found");
+            toastr.error(localizationJsDataObj.jqvalidator_invalid_handler_toastr ?? "Please proceed with valid input data and try again.", (localizationJsDataObj.oops_n_invalid_input_found !== undefined && localizationJsDataObj.oops_n_invalid_input_found) ? localizationJsDataObj.oops_n_invalid_input_found.replace('[error_cont]', errorsCount) : 'Oops! ' + errorsCount + " - Invalid Input Found");
             $('html, body').animate({
                 scrollTop: $(validator.errorList[0].element).offset().top - 20
             }, 600);
@@ -124,13 +124,13 @@ $(function() {
             }
         };
     }
-
+    
     $('#changeLocalization').on('change', function() {
         if ($(this).val() != '') {
             let lang = $(this).val();
             Swal.fire({
-                title: 'Switching your language',
-                text: 'Please wait...',
+                title: localizationJsDataObj.switching_language_loading_text ?? 'Switching your language',
+                text: localizationJsDataObj.please_wait ?? 'Please wait...',
                 didOpen: () => {
                     Swal.showLoading()
                 }

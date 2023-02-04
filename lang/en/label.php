@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'lang_text' => 'English',
     /** Form Fields */
     'form.field.salutation' => 'Salutation',
     'form.field.first_name' => 'First Name',

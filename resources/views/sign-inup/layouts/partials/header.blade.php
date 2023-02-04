@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ config('onex.app_title') }} @yield('page_title')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- favicons -->
+    <link rel="icon" type="image/x-icon" href="{{ asset(config('onex.asset_path') . 'favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset(config('onex.asset_path') . 'onex-favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ asset(config('onex.asset_path') . 'onex-favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset(config('onex.asset_path') . 'onex-favicon-16x16.png') }}">
+    <!-- end favicons -->
     @stack('page_meta')
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="{{ asset(config('onex.asset_path') . 'master-assets/fontawesome/css/all.min.css') }}">

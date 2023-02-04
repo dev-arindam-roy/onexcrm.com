@@ -25,6 +25,7 @@ class SignUpController extends Controller
     public function index(Request $request)
     {
         $dataBag = [];
+        $dataBag['localization_js_messages'] = Helper::localizationJsMessages();
         $signupView = 'signup-layout-';
         $layoutNo = $this->defaultSignupViewLayout;
         if ($request->has('layout') && !empty($request->get('layout'))) {
@@ -59,7 +60,7 @@ class SignUpController extends Controller
             $dataBag['validation_errors'] = $validation;
             $getValidationErrors = $validation['error_details'];
             if ($request->ajax()) {
-                $response = Helper::constructResponse($dataBag, 'Please proceed with valid input data and try again.', 'VALIDATION_ERROR', 203);
+                $response = Helper::constructResponse($dataBag, Lang::get('error.validation.sub_title.proceed_valid_input'), 'VALIDATION_ERROR', 203);
                 return response()->json($response);
             }
             $inputs = $request->except(['password', 'password_confirmation']);

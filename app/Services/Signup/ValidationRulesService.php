@@ -4,6 +4,7 @@ namespace App\Services\Signup;
 
 use Illuminate\Http\Request;
 use App\Rules\DisposableEmail;
+use App\Rules\PasswordValidation;
 use Validator;
 use Helper;
 use Lang;
@@ -77,7 +78,7 @@ class ValidationRulesService
             'username ' => ['bail', 'nullable', 'min:6', 'regex:/^[a-zA-Z0-9]{6,20}$/'],
             'email_id' => ['bail', 'required', 'email', new DisposableEmail(Lang::get('validation.form.email.not_accept')), 'unique:users,email'],
             'mobile_number' => ['bail', 'required', 'numeric', 'min:10', 'regex:/^[0-9]{10,12}$/'],
-            'password' => ['bail', 'required', 'min:8', 'max:20', 'confirmed'],
+            'password' => ['bail', 'required', 'min:8', 'max:20', 'confirmed', new PasswordValidation(Lang::get('validation.form.password.insecure'))],
             'password_confirmation' => ['bail', 'required', 'min:8', 'max:20'],
             'gender' => ['bail', 'nullable', 'in:male,female,other'],
             'business_name' => ['bail', 'required', 'min:2', 'max:60'],

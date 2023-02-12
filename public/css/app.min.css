@@ -1,1 +1,54 @@
-.form-lb{font-weight:600;margin-bottom:0}.form-lb em,em{color:#dc3545}.select2-container .select2-selection--single{height:40px!important;border:1px solid #ced4da!important}.select2-container--default .select2-selection--single .select2-selection__arrow b{margin-top:4px!important}.select2-container .select2-selection--multiple{border:1px solid #ced4da!important}.select2-container--default .select2-selection--multiple .select2-selection__choice{background-color:#007bff!important;border:1px solid #007bff!important}.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{color:#ddd!important}.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover{color:#fff!important}.toast{opacity:1!important}#toast-container>div{opacity:1!important}.custom-toastr-position{position:absolute;top:65px;right:15px;height:auto}.validation-error{margin-top:0!important;font-size:16px!important;color:#dc3545}.error-input-group{background-color:#dc3545;color:#fff;border-color:#dc3545}.success-input-group{background-color:#218838;color:#fff;border-color:#218838}
+.form-lb {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.form-lb em, em {
+    color: #dc3545;
+}
+.select2-container .select2-selection--single {
+    height: 40px !important;
+    border: 1px solid #ced4da !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    margin-top: 4px !important;
+}
+.select2-container .select2-selection--multiple {
+    border: 1px solid #ced4da !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #007bff !important;
+    border: 1px solid #007bff !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #ddd !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+    color: #fff !important;
+}
+.toast {
+    opacity: 1 !important;
+}
+#toast-container > div {
+    opacity: 1 !important; 
+}
+.custom-toastr-position {
+  position:absolute;
+  top:65px;
+  right:15px;
+  height:auto;
+}
+.validation-error {
+    margin-top: 0px !important;
+    font-size: 16px !important;
+    color: #dc3545;
+}
+.error-input-group {
+    background-color: #dc3545;
+    color: #fff;
+    border-color: #dc3545;
+}
+.success-input-group {
+    background-color: #218838;
+    color: #fff;
+    border-color: #218838;
+}

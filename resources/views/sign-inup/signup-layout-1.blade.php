@@ -190,13 +190,13 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <a href="#" class="btn btn-block btn-primary">
+                                <a href="{{ route('social.signinup.redirect', array('provider_name' => 'facebook')) }}" class="btn btn-block btn-primary">
                                     <i class="fab fa-facebook mr-2"></i>
                                     {{ __('label.button.facebook_signup') }}
                                 </a>
                             </div>
                             <div class="col-md-6">
-                                <a href="#" class="btn btn-block btn-danger mt-resp-10">
+                                <a href="{{ route('social.signinup.redirect', array('provider_name' => 'google')) }}" class="btn btn-block btn-danger mt-resp-10">
                                     <i class="fab fa-google-plus mr-2"></i>
                                     {{ __('label.button.google_signup') }}
                                 </a>
@@ -245,6 +245,7 @@ $(function() {
         })
     });
     */
+    /*
     var signupTime = 0;
     var formId = $('#signupFrm');
     formId.validate({
@@ -390,6 +391,7 @@ $(function() {
     function signupDuration() {
         signupTime = signupTime + 1;
     }
+    */
 });
 </script>
 @endpush

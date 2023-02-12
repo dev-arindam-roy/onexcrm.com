@@ -34,3 +34,6 @@ Route::get('/create-account', function () {
 Route::get('/free-account', function () {
     return redirect()->route('signup.businessAccount');
 });
+Route::get('/auth', function () {
+    return redirect()->route('signup.businessAccount');
+});

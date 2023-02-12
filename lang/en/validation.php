@@ -19,4 +19,5 @@ return [
     'form.field.server_side.min_length' => ':field_name contains minlength :field_length.',
     'form.field.server_side.max_length' => ':field_name contains maxlength :field_length.',
     'form.field.gender' => 'Gender must be equal with - male,female,other.',
+    'form.password.insecure' => 'Please put a strong password.',
 ];

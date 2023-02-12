@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use App\Services\Signup\ValidationRulesService as SignupValidationService;
 use App\Services\Signup\BusinessLogicService as SignupBusinessLogicService;
+use Laravel\Socialite\Facades\Socialite;
 use Helper;
 use Lang;
 use Log;
@@ -91,5 +92,21 @@ class SignUpController extends Controller
         }
         $response = Helper::constructResponse($dataBag, 'Something went worng during signup partial records save.', 'SIGNUP_PARTIAL_ERROR', 400);
         return response()->json($response);
+    }
+
+    public function socialSigninup(Request $request, $providerName)
+    {
+        return Socialite::driver($providerName)->redirect();
+    }
+
+    public function socialSigninupCallback(Request $request, $providerName)
+    {
+        $user = Socialite::driver($providerName)->user();
+        echo "<br/>" . $user->getId();
+        echo "<br/>" . $user->getNickname();
+        echo "<br/>" . $user->getName();
+        echo "<br/>" . $user->getEmail();
+        echo "<br/>" . $user->getAvatar();
+        dd('ok');
     }
 }

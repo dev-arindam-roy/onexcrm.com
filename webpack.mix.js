@@ -27,4 +27,3 @@ mix.styles([
 mix.css('resources/css/signinup.css', 'public/css/signinup.min.css')
     .sourceMaps()
     .version();
-

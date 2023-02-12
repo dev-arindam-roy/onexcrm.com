@@ -19,10 +19,11 @@ return new class extends Migration
             //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('account_id')->unique();
-            $table->tinyInteger('is_owner')->default(0)->comment('0=NO,1=YES');
             $table->string('account_name')->nullable();
-            $table->tinyInteger('account_status')->default(0)->comment('0=PARTIAL,1=ACTIVE,2=INACTIVE,3=DELETED,4=BLOCKED,5=CLOSED');
+            $table->tinyInteger('is_owner')->default(0)->comment('0=NO,1=YES');
+            $table->tinyInteger('account_status')->default(0)->comment('Get info from status_master table');
             $table->timestamps();
+            $table->index(['account_id']);
         });
     }
 

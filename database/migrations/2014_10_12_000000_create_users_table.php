@@ -23,14 +23,19 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('username')->unique()->nullable();
             $table->string('email')->unique();
-            $table->string('mobile_number', 20);
+            $table->string('mobile_number', 12)->nullable();
             $table->string('password');
             $table->enum('gender', ['male', 'female', 'other'])->nullable();
+            $table->string('social_provider_user_id')->nullable();
+            $table->string('social_provider_name')->nullable();
+            $table->text('profile_image')->nullable();
+            $table->text('avatar_url')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamp('mobile_verified_at')->nullable();
             $table->rememberToken();
-            $table->tinyInteger('user_status')->default(0)->comment('0=PARTIAL,1=ACTIVE,2=INACTIVE,3=DELETED,4=BLOCKED,5=CLOSED');
+            $table->tinyInteger('user_status')->default(0)->comment('Get info from status_master table');
             $table->timestamps();
+            $table->index(['mobile_number', 'gender', 'created_at']);
         });
     }
 

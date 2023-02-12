@@ -31,4 +31,28 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'google' => [
+        'client_id' => env('GOOGLE_SIGNINUP_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_SIGNINUP_CLIENT_SECRET'),
+        'redirect' => env('GOOGLE_SIGNINUP_AUTH_REDIRECT_URL'),
+    ],
+
+    'facebook' => [
+        'client_id' => env('FACEBOOK_SIGNINUP_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_SIGNINUP_CLIENT_SECRET'),
+        'redirect' => env('FACEBOOK_SIGNINUP_AUTH_REDIRECT_URL'),
+    ],
+
+    'github' => [
+        'client_id' => env('GITHUB_SIGNINUP_CLIENT_ID'),
+        'client_secret' => env('GITHUB_SIGNINUP_CLIENT_SECRET'),
+        'redirect' => env('GITHUB_SIGNINUP_AUTH_REDIRECT_URL'),
+    ],
+
+    'linkedin' => [
+        'client_id' => env('LINKEDIN_SIGNINUP_CLIENT_ID'),
+        'client_secret' => env('LINKEDIN_SIGNINUP_CLIENT_SECRET'),
+        'redirect' => env('LINKEDIN_SIGNINUP_AUTH_REDIRECT_URL'),
+    ],
+
 ];

@@ -40,6 +40,7 @@ return new class extends Migration
             $table->string('business_mini_logo')->nullable();
             $table->string('business_banner_image')->nullable();
             $table->timestamps();
+            $table->index(['business_name']);
         });
     }
 

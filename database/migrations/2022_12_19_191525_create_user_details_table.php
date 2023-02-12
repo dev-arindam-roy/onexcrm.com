@@ -18,9 +18,9 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('alternative_email')->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('alternative_mobile_number', 20)->nullable();
+            $table->string('alternative_mobile_number', 12)->nullable();
             $table->timestamp('mobile_verified_at')->nullable();
-            $table->string('whatsapp_number', 20)->nullable();
+            $table->string('whatsapp_number', 12)->nullable();
             $table->text('full_address')->nullable();
             $table->string('pincode', 10)->nullable();
             $table->string('city')->nullable();
@@ -32,7 +32,6 @@ return new class extends Migration
             $table->string('house_flat_no')->nullable();
             $table->string('house_flat_name')->nullable();
             $table->text('about_you')->nullable();
-            $table->string('profile_image')->nullable();
             $table->string('cover_image')->nullable();
             $table->timestamps();
         });

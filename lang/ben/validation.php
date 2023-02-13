@@ -18,5 +18,5 @@ return [
     'form.confirm_password.notmatch' => 'পাসওয়ার্ড মেলে নি',
     'form.field.server_side.min_length' => ':field_name এ ন্যূনতম :field_length অক্ষর প্রয়োজন',
     'form.field.server_side.max_length' => ':field_name এ সর্বাধিক :field_length অক্ষর অনুমোদিত',
-    'form.password.insecure' => 'একটি শক্তিশালী পাসওয়ার্ড রাখুন',
+    'form.password.strong' => 'একটি শক্তিশালী পাসওয়ার্ড রাখুন',
 ];

@@ -35,6 +35,6 @@ class PasswordValidation implements Rule
      */
     public function message()
     {
-        return $this->failMessage ?? 'Insecure password.';
+        return $this->failMessage ?? 'Please put a strong password.';
     }
 }

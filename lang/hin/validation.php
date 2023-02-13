@@ -18,5 +18,5 @@ return [
     'form.confirm_password.notmatch' => 'पासवर्ड मेल नहीं खाता',
     'form.field.server_side.min_length' => ':field_name के लिए :field_length वर्णों की आवश्यकता है',
     'form.field.server_side.max_length' => ':field_name में अधिकतम :field_length वर्ण हैं',
-    'form.password.insecure' => 'कृपया एक मजबूत पासवर्ड डालें',
+    'form.password.strong' => 'कृपया एक मजबूत पासवर्ड डालें',
 ];

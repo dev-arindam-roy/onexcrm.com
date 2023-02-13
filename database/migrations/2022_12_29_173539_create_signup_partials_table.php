@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::connection('mysql2')->create('signup_partials', function (Blueprint $table) {
             $table->id();
+            $table->string('session_id');
             $table->string('salutation')->nullable();
             $table->string('first_name');
             $table->string('middle_name')->nullable();
@@ -25,6 +26,8 @@ return new class extends Migration
             $table->string('business_name')->nullable();
             $table->string('layout_no', 25)->nullable();
             $table->string('layout_language', 25)->nullable();
+            $table->string('page_load_time', 25)->nullable()->comment('In seconds');
+            $table->string('signup_complete_time', 25)->nullable()->comment('In seconds');
             $table->text('url_str')->nullable();
             $table->text('url_hash')->nullable();
             $table->text('url_full')->nullable();
@@ -33,10 +36,12 @@ return new class extends Migration
             $table->string('country_code', 25)->nullable();
             $table->string('latitude', 25)->nullable();
             $table->string('longitude', 25)->nullable();
-            $table->string('device');
+            $table->string('device', 30);
             $table->string('os_platform')->nullable(); 
             $table->string('browser')->nullable();
-            $table->text('browser_details')->nullable(); 
+            $table->text('browser_details')->nullable();
+            $table->tinyInteger('conversion_status')->default(0)->comment('1=Converted'); 
+            $table->tinyInteger('status')->default(1)->comment('Get info from status_master table');
             $table->timestamps();
         });
     }

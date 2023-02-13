@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::connection('mysql2')->table('signup_partials', function (Blueprint $table) {
-            $table->dropIndex(['layout_no', 'ip_address', 'device', 'created_at']);
+            $table->dropIndex(['layout_no', 'ip_address', 'device', 'conversion_status', 'created_at']);
         });
     }
 };
